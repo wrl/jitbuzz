@@ -1,11 +1,11 @@
-CC := gcc
+CC := clang
 LD := $(CC)
 
 OUTDIR := build
 SRCDIR := src
 
-CFLAGS  += -Wall -Werror -std=c99 -D_GNU_SOURCE -pthread -I. -Ivendor/sljit/sljit_src -DSLJIT_CONFIG_AUTO=1
-LDFLAGS += -pthread -lrt
+CFLAGS  += -ggdb -Wall -Werror -std=c99 -pthread -I. -Ivendor/sljit/sljit_src -DSLJIT_CONFIG_AUTO=1
+LDFLAGS += -pthread
 
 TARGETS  = $(OUTDIR)/jitbuzz
 
